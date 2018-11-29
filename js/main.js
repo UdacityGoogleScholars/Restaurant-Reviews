@@ -200,10 +200,10 @@ createRestaurantHTML = (restaurant) => {
     rating.innerHTML = restaurantRating(restaurant);
     label.append(rating);
 
-  const more = document.createElement('a');
-  more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  const cuisine = document.createElement('span');
+  cuisine.innerHTML = 'View Details';
+  cuisine.innerHTML = restaurant.cuisine_type;
+  li.append(cuisine)
 
   return li
 }
