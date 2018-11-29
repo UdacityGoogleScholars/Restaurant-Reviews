@@ -193,8 +193,12 @@ createRestaurantHTML = (restaurant) => {
   label.append(address);
 
   const hr = document.createElement('hr');
-  	  label.append(hr);
+  	  label.append(hr);\
 
+  const rating = document.createElement('span');
+    rating.className = 'rating';
+    rating.innerHTML = restaurantRating(restaurant);
+    label.append(rating);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
