@@ -22,8 +22,6 @@ var markers = [];
   	    });
   	  }
 
-
-
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
@@ -41,7 +39,7 @@ fetchNeighborhoods = () => {
       fillNeighborhoodsHTML();
     }
   });
-}
+};
 
 /**
  * Set neighborhoods HTML.
@@ -68,7 +66,7 @@ fetchCuisines = () => {
       fillCuisinesHTML();
     }
   });
-}
+};
 
 /**
  * Set cuisines HTML.
@@ -82,7 +80,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     option.value = cuisine;
     select.append(option);
   });
-}
+};
 
 /**
  * Initialize leaflet map, called from HTML.
@@ -102,20 +100,10 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
 
-  updateRestaurants();
-}
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
+      updateRestaurants();
+    }
+    document.getElementById('map').tabIndex = '-1';
+    	/* window.initMap = () => {	106	};
 
 /**
  * Update page and map for current restaurants.
@@ -137,8 +125,8 @@ updateRestaurants = () => {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
     }
-  })
-}
+  });
+};
 
 /**
  * Clear current restaurants, their HTML and remove their map markers.
@@ -155,7 +143,7 @@ resetRestaurants = (restaurants) => {
   }
   self.markers = [];
   self.restaurants = restaurants;
-}
+};
 
 /**
  * Create all restaurants HTML and add them to the webpage.
@@ -173,6 +161,16 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+
+  const link = document.createElement('a');
+	  link.href = DBHelper.urlForRestaurant(restaurant);
+	  link.className = restaurant.cuisine_type.toLowerCase();
+	  link.setAttribute('aria-label', 'Details of ' + restaurant.name + ' restaurant, ' + restaurant.neighborhood);
+	  link.tabIndex = '0';
+	  li.append(link);
+
+
+
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
