@@ -175,9 +175,8 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = 'Image of ' + restaurant.name + ' restaurant';
   li.append(image);
-
-
 
 	const label = document.createElement('div');
 	  label.className = 'restaurant-label';
@@ -207,7 +206,7 @@ createRestaurantHTML = (restaurant) => {
     label.append(rating);
 
   const cuisine = document.createElement('span');
-  cuisine.innerHTML = 'View Details';
+  cuisine.innerHTML = 'cuisine';
   cuisine.innerHTML = restaurant.cuisine_type;
   li.append(cuisine)
 
