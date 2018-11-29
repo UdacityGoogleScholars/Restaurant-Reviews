@@ -207,6 +207,13 @@ createRestaurantHTML = (restaurant) => {
 
   return li
 }
+restaurantRating = (restaurant) => {
+	  let reviews = restaurant.reviews.map( (r) => r.rating);
+	  let rating = reviews.reduce((a, b) => a + b, 0) / reviews.length;
+	  rating = rating.toFixed(1);
+	
+	  return rating;
+	};
 
 /**
  * Add markers for current restaurants to the map.
