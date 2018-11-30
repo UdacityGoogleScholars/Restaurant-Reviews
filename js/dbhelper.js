@@ -9,8 +9,8 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     return `./data/restaurants.json`;
-    const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    //const port = 8000 // Change this to your server port
+   // return `http://localhost:${port}/data/restaurants.json`;
   }
 
   /**
@@ -92,7 +92,7 @@ class DBHelper {
       if (error) {
         callback(error, null);
       } else {
-        let results = restaurants
+        let results = restaurants;
         if (cuisine != 'all') { // filter by cuisine
           results = results.filter(r => r.cuisine_type == cuisine);
         }
