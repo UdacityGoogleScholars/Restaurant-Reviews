@@ -1,6 +1,9 @@
-# Mobile Web Specialist Certification Course
+# Project 5: Restaurant Reviews App, Stage 1
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
+
+# Live Version
+https://udacitygooglescholars.github.io/Restaurant-Reviews/
 
 ## Project Overview: Stage 1
 
