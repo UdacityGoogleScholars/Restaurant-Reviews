@@ -29,7 +29,7 @@ initMap = () => {
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'
       }).addTo(newMap);
-    
+
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
@@ -82,6 +82,9 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  const neighborhood = document.getElementById('restaurant-neighborhood');
+  neighborhood.innerHTML = restaurant.neighborhood;
+ 
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
