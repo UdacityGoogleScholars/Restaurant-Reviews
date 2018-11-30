@@ -91,7 +91,13 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   // fill reviews
   fillReviewsHTML();
 }
+restaurantRating = (restaurant) => {
+  let reviews = restaurant.reviews.map( (r) => r.rating);
+  let rating = reviews.reduce((a, b) => a + b, 0) / reviews.length;
+  rating = rating.toFixed(1);
 
+  return rating;
+};
 /**
  * Create restaurant operating hours HTML table and add it to the webpage.
  */
@@ -157,7 +163,6 @@ createReviewHTML = (review) => {
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.className = 'rating';
-  li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
