@@ -97,6 +97,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
+  const rating = document.getElementById('restaurant-rating');
+  rating.innerHTML = 'Rating: ' + restaurantRating(restaurant);
+
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
