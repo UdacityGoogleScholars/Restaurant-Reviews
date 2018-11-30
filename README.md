@@ -13,6 +13,12 @@ For the **Restaurant Reviews** projects, you will incrementally convert a static
 
 You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
 
+### Development Strategy
+Use MapBox API key to get the map on the screen.
+Create a responsive grid-based layout using CSS.
+Use media queries that provide fluid breakpoints across different screen sizes
+Use responsive images that adjust for the dimensions and resolution of any mobile device.
+
 ### Project Rubric
 
 Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
@@ -34,3 +40,35 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 ### Note about ES6
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+
+### Additional Resources
+In-depth look at responsive images
+https://www.udacity.com/course/responsive-images--ud882
+
+Use JavaScript directly to create a tab index for each element desired.
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex
+
+Media Queries for Standard Devices via CSS Tricks
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+Time-saving CSS techniques to create responsive images
+https://medium.freecodecamp.org/time-saving-css-techniques-to-create-responsive-images-ebb1e84f90d5
+
+Responsive Images via Google
+https://developers.google.com/web/ilt/pwa/lab-responsive-images
+
+Service Workers: An Introduction via Google
+https://developers.google.com/web/fundamentals/primers/service-workers/
+
+###Style Guides
+HTML Style Guide
+http://udacity.github.io/frontend-nanodegree-styleguide/index.html
+
+CSS Style Guide
+http://udacity.github.io/frontend-nanodegree-styleguide/css.html
+
+JavaScript Style Guide
+http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
+
+Git Style Guide
+https://udacity.github.io/git-styleguide/
