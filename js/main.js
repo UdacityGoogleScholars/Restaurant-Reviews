@@ -87,7 +87,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
+        center: [34.0207, -118.6919],
         zoom: 12,
         scrollWheelZoom: false
       });
