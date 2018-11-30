@@ -1,16 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
 
+* {
+    box-sizing: border-box;
+}
+
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
+	font-family: Palatino Linotype;
+	font-size: 0.95em;
+	font-weight: lighter;
+	color: #40557;
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+	background-color: #DADADA;
 	margin: 0;
 	position:relative;
+	overflow-x: visible;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
