@@ -1,7 +1,7 @@
 let restaurants,
   neighborhoods,
-  cuisines
-var newMap
+  cuisines;
+var newMap;
 var markers = [];
 
 /**
@@ -92,7 +92,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<pk.eyJ1IjoiY29kaW5nbW9tbXkiLCJhIjoiY2pwMXpxcWY4MDF5bDNwbzFmOWRxcDdubSJ9.ub-4VXTT65NmPe3Hej8bOQ>',
+    mapboxToken: 'pk.eyJ1IjoiY29kaW5nbW9tbXkiLCJhIjoiY2pwMXpxcWY4MDF5bDNwbzFmOWRxcDdubSJ9.ub-4VXTT65NmPe3Hej8bOQ',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -101,9 +101,9 @@ initMap = () => {
   }).addTo(newMap);
 
       updateRestaurants();
-    }
-    document.getElementById('map').tabIndex = '-1';
-    	/* window.initMap = () => {	106	};
+
+      document.getElementById('map').tabIndex = '-1';
+      };
 
 /**
  * Update page and map for current restaurants.
@@ -176,7 +176,7 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = 'Image of ' + restaurant.name + ' restaurant';
-  li.append(image);
+  link.append(image);
 
 	const label = document.createElement('div');
 	  label.className = 'restaurant-label';
@@ -198,7 +198,7 @@ createRestaurantHTML = (restaurant) => {
   label.append(address);
 
   const hr = document.createElement('hr');
-  	  label.append(hr);\
+  	  label.append(hr);
 
   const rating = document.createElement('span');
     rating.className = 'rating';
@@ -206,9 +206,9 @@ createRestaurantHTML = (restaurant) => {
     label.append(rating);
 
   const cuisine = document.createElement('span');
-  cuisine.innerHTML = 'cuisine';
+  cuisine.className = 'cuisine';
   cuisine.innerHTML = restaurant.cuisine_type;
-  li.append(cuisine)
+  link.append(cuisine)
 
   return li
 }
