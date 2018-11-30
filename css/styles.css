@@ -95,18 +95,49 @@ nav {
 	color: #fed766;
 
 }
+/* Restaurant Filtering */
 
-/* Add a color to all links inside the list */
-#breadcrumb li a {
-    color: #fed766;
-    text-decoration: none;
+.filter-options {
+	align-items: center;
+	display: inline-flex;
+	float: right;
+	padding-right: 2em;
 }
 
-/* Add a color on mouse-over */
-#breadcrumb li a:hover {
-    color: #fe4a49;
-    text-decoration: underline;
+.filter-options h2 {
+	color: #651e3;
+	font-size: 1.2em;
+	line-height: 1;
+	margin: 1em;
 }
+
+.filter-options select {
+	background-color: #ff9800;
+	color: #683800;
+	font-family: 'Merriweather', serif;
+	font-size: 1em;
+	border: 1px solid #ff9800;
+	border-radius: 0.5em;
+	margin: 0 0.5em;
+	padding: 0.5em;
+	width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
