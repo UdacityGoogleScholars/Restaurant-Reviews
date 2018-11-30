@@ -4,7 +4,7 @@
     "name": "Mission Chinese Food",
     "neighborhood": "Manhattan",
     "photograph": "1.jpg",
-    "address": "171 E Broadway, New York, NY 10002",
+    "address": "801 South La Brea Ave, Los Angeles, CA 90036",
     "latlng": {
       "lat": 40.713829,
       "lng": -73.989667
@@ -40,10 +40,10 @@
     ]
   }, {
     "id": 2,
-    "name": "Emily",
-    "neighborhood": "Brooklyn",
+    "name": "Rascal",
+    "neighborhood": "Miracle Mile",
     "photograph": "2.jpg",
-    "address": "919 Fulton St, Brooklyn, NY 11238",
+    "address": "801 South La Brea Ave, Los Angeles, CA 90036",
     "latlng": {
       "lat": 40.683555,
       "lng": -73.966393
